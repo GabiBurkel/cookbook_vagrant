@@ -1,7 +1,0 @@
-DEPENDENCIES
-  cookbook_vagrant
-    path: .
-    metadata: true
-
-GRAPH
-  cookbook_vagrant (0.0.1)

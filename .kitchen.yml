@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.21.26
+
+platforms:
+  - name: debian-9.3
+    driver:
+      #box_url: https://app.vagrantup.com/bento/debian-9.3
+      box: bento/debian-9.3
+      box_check_update: true
+      provision: true
+
+suites:
+  - name: default
+    run_list:
+      - recipe[cookbook_vagrant::default]
